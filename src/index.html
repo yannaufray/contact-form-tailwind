@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+			rel="stylesheet" />
+		<link href="./output.css" rel="stylesheet" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Contact form</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body class="bg-green-200 font-karla">
+		<form
+			class="bg-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded p-5">
+			<h2 class="text-xl font-bold mb-5">Contact us</h2>
+
+			<div class="flex flex-col gap-1 text-xs">
+				<div class="flex flex-col sm:flex-row sm:gap-3">
+					<div class="flex flex-col gap-1 flex-1">
+						<label for="first-name">First name *</label>
+						<input
+							type="text"
+							class="border rounded px-2 py-1 border-medium-grey focus:border-green-600 active:border-green-600 hover:border-green-600 focus:outline-none peer"
+							name="first-name"
+							id="first-name"
+							required />
+						<p class="invisible peer-invalid:visible text-red transition">
+							This field is required
+						</p>
+					</div>
+
+					<div class="flex flex-col gap-1 flex-1">
+						<label for="last-name">Last name *</label>
+						<input
+							type="text"
+							name="last-name"
+							id="last-name"
+							class="border rounded px-2 py-1 border-medium-grey focus:border-green-600 active:border-green-600 hover:border-green-600 focus:outline-none peer"
+							required />
+						<p class="invisible peer-invalid:visible text-red transition">
+							This field is required
+						</p>
+					</div>
+				</div>
+
+				<div class="flex flex-col gap-1">
+					<label for="email">Email adress *</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						class="flex-1 border rounded px-2 py-1 border-medium-grey focus:border-green-600 active:border-green-600 hover:border-green-600 focus:outline-none peer" />
+					<p class="invisible peer-invalid:visible text-red transition">
+						Please enter a valid email adress.
+					</p>
+				</div>
+
+				<div>
+					<p class="mb-1">Query type *</p>
+					<div class="flex flex-col sm:flex-row gap-3 cursor-pointer">
+						<label
+							class="flex-1 border border-medium-grey rounded py-2 px-4 flex items-center gap-3 focus-within:border-green-600 active:border-green-600 hover:border-green-600 focus:outline-none transition-all cursor-pointer has-[:checked]:bg-green-200 sm:min-w-52">
+							<input
+								type="radio"
+								name="query"
+								id="general-inquiry"
+								class="cursor-pointer accent-green-600 peer"
+								required />
+							<span class="whitespace-nowrap">General Inquiry</span>
+						</label>
+						<label
+							class="flex-1 border border-medium-grey rounded py-2 px-4 flex items-center gap-3 focus-within:border-green-600 active:border-green-600 hover:border-green-600 focus:outline-none transition-all cursor-pointer has-[:checked]:bg-green-200 sm:min-w-52">
+							<input
+								type="radio"
+								name="query"
+								id="support-request"
+								class="cursor-pointer accent-green-600 peer"
+								required />
+							<span class="whitespace-nowrap">Support Request</span>
+						</label>
+					</div>
+					<p class="invisible peer-invalid:visible text-red transition">
+						Please select a query type
+					</p>
+				</div>
+
+				<div class="flex flex-col">
+					<label for="textarea" class="mb-1">Message</label>
+					<textarea
+						name="textarea"
+						id="textarea"
+						rows="5"
+						class="border border-medium-grey rounded hover:border-green-600 focus:outline-none px-2 py-1 resize-none peer invalid:border-red"
+						required></textarea>
+					<p class="invisible peer-invalid:visible text-red">
+						This field is required
+					</p>
+				</div>
+
+				<div class="cursor-pointer">
+					<input
+						type="checkbox"
+						name="consent"
+						id="consent"
+						class="accent-green-600 cursor-pointer mr-3 peer"
+						required />
+					<label for="consent" class="cursor-pointer"
+						>I consent to being contacted by the team *</label
+					>
+					<p class="visible peer-checked:invisible text-red transition">
+						To submit this form, please consent to being contacted
+					</p>
+				</div>
+
+				<button
+					type="submit"
+					class="bg-green-600 hover:bg-darker-grey text-white rounded py-3 transition-all mt-3">
+					Submit
+				</button>
+			</div>
+		</form>
+
+		<!-- <div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+			Coded by <a href="#">Yann</a>.
+		</div> -->
+	</body>
+</html>
